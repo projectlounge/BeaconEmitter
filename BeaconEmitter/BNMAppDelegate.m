@@ -86,7 +86,7 @@
         [self.manager stopAdvertising];
         [sender setTitle:@"Turn iBeacon on"];
     } else {
-       
+       self.uuid.stringValue = @"B2486DEB-9F6F-43DB-BCF5-038501FA35D3";
         NSUUID *proximityUUID  = [[NSUUID alloc] initWithUUIDString:self.uuid.stringValue];
         if (proximityUUID) {
             BNMBeaconRegion *beacon = [[BNMBeaconRegion alloc] initWithProximityUUID:proximityUUID major:self.major.intValue minor:self.minor.intValue  identifier:self.identifier.stringValue];
